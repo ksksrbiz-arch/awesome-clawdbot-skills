@@ -41,6 +41,58 @@ These skills follow the Agent Skill convention develop by Anthropic, an open sta
 npx clawdhub@latest install <skill-slug>
 ```
 
+### Direct Download (curl/wget)
+
+Download and install a skill directly using curl or wget:
+
+**Using curl:**
+```bash
+# For global installation
+mkdir -p ~/.clawdbot/skills/<skill-name>
+curl -L https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/skill.json -o ~/.clawdbot/skills/<skill-name>/skill.json
+curl -L https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/SKILL.md -o ~/.clawdbot/skills/<skill-name>/SKILL.md
+
+# For workspace installation
+mkdir -p ./skills/<skill-name>
+curl -L https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/skill.json -o ./skills/<skill-name>/skill.json
+curl -L https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/SKILL.md -o ./skills/<skill-name>/SKILL.md
+```
+
+**Using wget:**
+```bash
+# For global installation
+mkdir -p ~/.clawdbot/skills/<skill-name>
+wget -O ~/.clawdbot/skills/<skill-name>/skill.json https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/skill.json
+wget -O ~/.clawdbot/skills/<skill-name>/SKILL.md https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/SKILL.md
+
+# For workspace installation
+mkdir -p ./skills/<skill-name>
+wget -O ./skills/<skill-name>/skill.json https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/skill.json
+wget -O ./skills/<skill-name>/SKILL.md https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/SKILL.md
+```
+
+### Git-based Installation
+
+Clone a specific skill directly from the repository:
+
+```bash
+# For global installation
+git clone --depth 1 --filter=blob:none --sparse https://github.com/clawdbot/skills.git ~/.clawdbot/skills/temp
+cd ~/.clawdbot/skills/temp
+git sparse-checkout set skills/<author>/<skill-name>
+mv skills/<author>/<skill-name> ~/.clawdbot/skills/<skill-name>
+cd .. && rm -rf temp
+
+# For workspace installation (simpler approach)
+# Clone the entire skill folder
+git clone --depth 1 --filter=blob:none --sparse https://github.com/clawdbot/skills.git temp-skills
+cd temp-skills
+git sparse-checkout set skills/<author>/<skill-name>
+mkdir -p ../skills
+mv skills/<author>/<skill-name> ../skills/<skill-name>
+cd .. && rm -rf temp-skills
+```
+
 ### Manual Installation
 
 Copy the skill folder to one of these locations:
