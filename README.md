@@ -94,6 +94,8 @@ Skills should be placed in one of these locations:
 
 Priority: Workspace > Local > Bundled
 
+> **Testing:** You can test all installation methods using the included test script: `.github/test-installation-methods.sh`
+
 
 ## Table of Contents
 
