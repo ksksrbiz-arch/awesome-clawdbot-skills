@@ -71,6 +71,8 @@ wget -O ./skills/<skill-name>/skill.json https://raw.githubusercontent.com/clawd
 wget -O ./skills/<skill-name>/SKILL.md https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/SKILL.md
 ```
 
+**Note:** Replace `<author>` and `<skill-name>` with actual values from the skill links in the sections below. For example, for the [discord](https://github.com/clawdbot/skills/tree/main/skills/steipete/discord/SKILL.md) skill, use `author=steipete` and `skill-name=discord`.
+
 ### Git-based Installation
 
 Clone a specific skill directly from the repository:
