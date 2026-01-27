@@ -83,8 +83,7 @@ git sparse-checkout set skills/<author>/<skill-name>
 mv skills/<author>/<skill-name> ~/.clawdbot/skills/<skill-name>
 cd .. && rm -rf temp
 
-# For workspace installation (simpler approach)
-# Clone the entire skill folder
+# For workspace installation
 git clone --depth 1 --filter=blob:none --sparse https://github.com/clawdbot/skills.git temp-skills
 cd temp-skills
 git sparse-checkout set skills/<author>/<skill-name>
