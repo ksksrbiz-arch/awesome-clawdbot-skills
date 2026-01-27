@@ -49,12 +49,12 @@ Download and install a skill directly using curl or wget:
 ```bash
 # For global installation
 mkdir -p ~/.clawdbot/skills/<skill-name>
-curl -L https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/skill.json -o ~/.clawdbot/skills/<skill-name>/skill.json
+curl -L https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/_meta.json -o ~/.clawdbot/skills/<skill-name>/_meta.json
 curl -L https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/SKILL.md -o ~/.clawdbot/skills/<skill-name>/SKILL.md
 
 # For workspace installation
 mkdir -p ./skills/<skill-name>
-curl -L https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/skill.json -o ./skills/<skill-name>/skill.json
+curl -L https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/_meta.json -o ./skills/<skill-name>/_meta.json
 curl -L https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/SKILL.md -o ./skills/<skill-name>/SKILL.md
 ```
 
@@ -62,12 +62,12 @@ curl -L https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<
 ```bash
 # For global installation
 mkdir -p ~/.clawdbot/skills/<skill-name>
-wget -O ~/.clawdbot/skills/<skill-name>/skill.json https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/skill.json
+wget -O ~/.clawdbot/skills/<skill-name>/_meta.json https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/_meta.json
 wget -O ~/.clawdbot/skills/<skill-name>/SKILL.md https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/SKILL.md
 
 # For workspace installation
 mkdir -p ./skills/<skill-name>
-wget -O ./skills/<skill-name>/skill.json https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/skill.json
+wget -O ./skills/<skill-name>/_meta.json https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/_meta.json
 wget -O ./skills/<skill-name>/SKILL.md https://raw.githubusercontent.com/clawdbot/skills/main/skills/<author>/<skill-name>/SKILL.md
 ```
 
